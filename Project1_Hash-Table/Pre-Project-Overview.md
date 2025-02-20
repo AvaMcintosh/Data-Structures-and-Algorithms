@@ -3,9 +3,9 @@ In this project I will choose between chaining or probing to handle collision re
 
 # Given Code
 1. HashTable.h
-  - Header file
-  - Declaration of all methods
-  - Decide on data structure for hash table, based on collision resolution approach
+    - Header file
+    - Declaration of all methods
+    - Decide on data structure for hash table, based on collision resolution approach
 2. HashTable.cpp
   - Stubs for all the methods for HashTable and HashTableBucket classes
   - HashTableBucket methods have all been written
