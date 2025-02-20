@@ -47,18 +47,25 @@ In this project I will choose between chaining or probing to handle collision re
       - Chaining - each bucket has a list of items (A bucket could have keys 5 and 6)
       - Probing (Open Addressing) - If a bucket already has a key an empty buckey is looked for somewhere else in the table
           * Linear Probing - Starts at the key's mapped bucket and then linear searches subsequent buckets until an empty bucket is found
+            
           * Pseudo-random - prevents primary clustering
               * Create an array called offsets size(n-1).
               * The array is initialized with values 1 - (n-1)
               * Shuffle them randomly
               * Location for the probe is given by (home + offsets[i-1])
                  
-          * Quadratic Probing
-          * Double Hashing
+          * Quadratic Probing - Starts at the key's mapped bucket and quadratically searches subsequent buckets until an empty bucket is found
+              *(H + c1*i + c2*i) % tablesize
+                  * H = hash code
+                  * c1 & c2 = programmer defined non-negative integers
+            
+          * Double Hashing - uses 2 different hash functions to compute bucket indices
+              * [H1(key) + i*H2(key)] % tablesize 
+        
 7. Enum BucketType
 8. Data Storage
       - Chaining
-          * What is a C++ Container? (List, Vector)
+          * What is a C++ Container? (List, Vector) - Holder object that stores a collection of other objects
       - Open Addressing
           * Pseudo Random Probing
           * Double Hashing
